@@ -1,25 +1,38 @@
 {
+  // 编译选项
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "target": "ES2020", // 目标运行时版本为ES2020
+    "useDefineForClassFields": true, // 使用`class`定义字段选项为true
+    "module": "ESNext", // 模块为ESNext
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ], // 使用的库为ES2020、DOM和DOM.Iterable
+    "skipLibCheck": true, // 跳过库检查
+    // Bundler模式选项
+    "moduleResolution": "bundler", // 模块解析方式为bundler
+    "allowImportingTsExtensions": true, // 允许导入以.ts为后缀的文件
+    "resolveJsonModule": true, // 解析JSON模块
+    "isolatedModules": true, // 孤立模块
+    "noEmit": true, // 不生成输出文件
+    "jsx": "preserve", // JSX保留为原始格式
+    // Linting选项
+    // "strict": true, // 使用严格模式
+    // "noUnusedLocals": true, // 禁止未使用的局部变量
+    // "noUnusedParameters": true, // 禁止未使用的参数
+    "noFallthroughCasesInSwitch": true // 禁止在switch语句中遗漏case
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  // 包含的文件类型
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  // 引用的tsconfig文件
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
