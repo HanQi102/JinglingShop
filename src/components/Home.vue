@@ -98,6 +98,7 @@ onMounted(() => {
 .homeBox {
     width: 100%;
     height: 100%;
+    background: url(../assets/bj.jpg);
 
     .el-container {
         height: 100%;
@@ -167,8 +168,6 @@ onMounted(() => {
                     height: calc(100% - 30px);
                     border: none;
 
-
-                    .el-sub-menu {}
                 }
             }
         }
