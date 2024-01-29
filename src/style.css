@@ -11,3 +11,12 @@ body,
     min-width: 1200px;
     min-height: 600px;
 }
+
+.el-breadcrumb {
+    margin-bottom: 15px;
+    font-size: 12px !important;
+
+    .el-breadcrumb__inner {
+        color: white !important;
+    }
+}
