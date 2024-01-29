@@ -24,3 +24,10 @@ body,
 .el-table {
     font-size: 12px !important;
 }
+
+.el-col {
+    .el-input {
+        height: 40px;
+
+    }
+}

@@ -52,7 +52,6 @@
             <el-form ref="editFormRef" :model="editRuleForm" :rules="editRules" label-width="120px">
                 <el-form-item label="商品名称" prop="goods_name">
                     <el-input v-model="editRuleForm.goods_name" />
-                    <p>{{ editRuleForm.goods_name }}</p>
                 </el-form-item>
                 <el-form-item label="商品价格(元)" prop="goods_price">
                     <el-input v-model="editRuleForm.goods_price" />
@@ -77,6 +76,7 @@
 </template>
 
 <script setup lang="ts">
+import timesTamp from '../../utils/timesTamp.ts'
 import { ref, reactive, getCurrentInstance, onMounted } from 'vue';
 import { ArrowRight, Edit, Delete, Search } from '@element-plus/icons-vue'
 import { ElTable, ElMessage, ElMessageBox } from 'element-plus'
@@ -110,20 +110,6 @@ const handleCurrentChange = (val: number) => {
     getGoodsList()
 }
 
-// 时间戳
-const timesTamp = (time: any) => {
-    let date = new Date(time * 1000);
-    // 获取各个时间组件
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-
-    // 格式化时间
-    return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-}
 // 控制修改对话框显示隐藏
 const editDialogVisible = ref(false)
 
