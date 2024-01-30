@@ -327,23 +327,5 @@ onMounted(() => {
     width: 100%;
     height: 100%;
 
-    .box-card {
-        .card-header {
-            .el-row {
-                .el-col {
-                    margin-right: 10px;
-
-                    .el-input {
-                        height: 40px;
-                    }
-
-                    .el-button {
-                        height: 40px;
-                    }
-                }
-            }
-        }
-    }
-
 }
 </style>

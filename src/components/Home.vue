@@ -10,7 +10,7 @@
                             精灵购物平台管理系统
                         </div>
                     </el-col>
-                    <el-col :span="2">
+                    <el-col :span="1">
                         <div class="right">
                             <el-popconfirm width="220" confirm-button-text="确定" cancel-button-text="取消" :icon="InfoFilled"
                                 @confirm="logout" icon-color="#626AEF" title="确定要退出登录吗?">

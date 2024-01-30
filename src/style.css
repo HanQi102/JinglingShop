@@ -25,9 +25,16 @@ body,
     font-size: 12px !important;
 }
 
+
 .el-col {
+
+    margin-right: 10px;
+
     .el-input {
         height: 40px;
+    }
 
+    .el-button {
+        height: 40px;
     }
 }

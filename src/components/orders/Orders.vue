@@ -105,7 +105,6 @@ const getOrdersList = async () => {
     })
     if (res.meta.status !== 200) return ElMessage.error('获取订单数据列表数据失败')
     ordersList.data = res.data.goods
-    console.log(ordersList);
 }
 // 控制修改地址对话框显示隐藏
 const orderDialogVisible = ref(false)
@@ -123,10 +122,7 @@ const Rules = reactive({
 const cityOptions_ = ref(cityOptions)
 
 const showEditDialog = (row) => {
-
     orderForm = row
-    console.log(orderForm);
-
     orderDialogVisible.value = true
 }
 
@@ -204,7 +200,10 @@ const showScheduleDialog = () => {
 // 关闭弹窗对话框回调函数
 const handleClose = () => {
     orderDialogVisible.value = false
-
+    Object.keys(orderForm).forEach((key) => {
+        orderForm[key] = ''
+    })
+    getOrdersList()
 }
 
 onMounted(() => {
